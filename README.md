@@ -15,9 +15,9 @@ it seem the qwen8b is sufficient to call the tool given a limited tool set, and 
 see report below:
 # Summary Table – All Tests
 
-| Model             | RAM Usage (GB) | Math Score | Coding Score | Step-by-Step Reasoning | Tool Order Rating | Maximum Profit           | Total Score | Notes                                           |
-|------------------|----------------|-----------|--------------|-----------------------|-----------------|------------------------|------------|------------------------------------------------|
-| DeepSeek-R1 14B   | 8.7            | 5/5       | 5/5          | 5/5                   | 2/5             | 3366.8 @ (66.67,10)   | 20/20      | Best math & coding, tool-call order weak      |
-| Qwen-3 8B         | 7.7            | 4/5       | 5/5          | 3/5                   | 5/5             | 3320 @ (20,36)         | 17/20      | Very good tool-call sequencing, verbose outputs |
-| Mistral-12B       | 8.5            | 1/5       | 1/5          | 4/5                   | 3/5             | 260 @ (20,40) ❌        | 7/20       | Poor math/coding, readable output, tool-call sequencing mediocre |
+| Model             | RAM Usage (GB) | Math Score | Coding Score | Step-by-Step Reasoning | Tool Order Rating | Maximum Profit             | Notes                                           |
+|------------------|----------------|-----------|--------------|-----------------------|-----------------|------------------------|------------------------------------------------|
+| DeepSeek-R1 14B   | 8.7            | 5/5       | 5/5          | 5/5                   | 2/5             | 3366.8 @ (66.67,10)        | Best math & coding, tool-call order weak      |
+| Qwen-3 8B         | 7.7            | 4/5       | 5/5          | 3/5                   | 5/5             | 3320 @ (20,36)             | Very good tool-call sequencing, verbose outputs |
+| Mistral-12B       | 8.5            | 1/5       | 1/5          | 4/5                   | 3/5             | 260 @ (20,40) ❌              | Poor math/coding, readable output, tool-call sequencing mediocre |
 
