@@ -1,0 +1,30 @@
+You are given a combined math + Python problem.  
+Solve it fully and show your reasoning.
+
+---
+
+Problem:
+
+A factory produces two products, A and B.
+
+- Each unit of product A requires 3 hours of machine time and yields $40 profit.  
+- Each unit of product B requires 5 hours of machine time and yields $70 profit.  
+- The factory has at most 240 machine hours per week.  
+- The factory must produce at least 20 units of product A and at least 10 units of product B each week to satisfy contracts.
+
+Tasks:
+
+1. Math / Optimization  
+   Formulate this as a linear programming problem, then solve for the profit-maximizing production plan using mathematical reasoning.  
+   - Find the number of units of A and B that maximize profit.  
+   - Show the math steps (constraints, objective function, boundary reasoning).
+
+2. Python Coding  
+   Write Python code that uses scipy.optimize.linprog to solve the same linear programming problem and verify your mathematical answer.
+
+3. Final Output  
+   Provide:  
+   - The optimal number of units of A and B  
+   - The resulting maximum profit  
+   - The Python code and its expected numerical output  
+   Do not produce excessive text. Keep it concise and structured.

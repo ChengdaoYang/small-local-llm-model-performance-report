@@ -1,0 +1,42 @@
+FROM qwen3:8b
+
+# --------------------------
+# Context + output settings
+# --------------------------
+# Maximum context window (input + output tokens)
+PARAMETER num_ctx 16384
+# Maximum number of tokens to generate in one run
+PARAMETER num_predict 8192
+
+# --------------------------
+# Sampling / reasoning quality
+# --------------------------
+# Controls randomness: lower = more deterministic / logical
+PARAMETER temperature 0.2
+# Nucleus sampling: consider top 90% probability mass
+PARAMETER top_p 0.9
+# Top-K sampling: restrict to 40 most likely tokens at each step
+PARAMETER top_k 40
+# Prevent repeated tokens in output
+PARAMETER repeat_penalty 1.1
+# Penalize repeated token frequency (encourages diversity)
+PARAMETER frequency_penalty 0.2
+# Penalize presence of repeated concepts / tokens
+PARAMETER presence_penalty 0.2
+
+# --------------------------
+# Stability / performance
+# --------------------------
+# Batch size for GPU generation; smaller = safer on low VRAM
+PARAMETER num_batch 64
+
+# Number of CPU threads for auxiliary computation
+PARAMETER num_thread 6
+# Fixed seed for reproducible outputs
+PARAMETER seed 42
+
+# --------------------------
+# Prompt template
+# --------------------------
+# Standard template to insert your input prompt
+TEMPLATE """{{ .Prompt }}"""

@@ -1,0 +1,65 @@
+Prompt: Tool-Use Test for MCP / Function-Calling
+
+Scenario:
+
+You are an AI assistant with access to the following tools. Each tool has a specific purpose and required arguments. Your goal is to achieve the user request by calling the tools correctly in sequence.
+
+Available Tools:
+
+weather_check(city: str, date: str) -> str
+
+Returns the weather forecast for a given city and date.
+
+currency_convert(amount: float, from_currency: str, to_currency: str) -> float
+
+Converts an amount from one currency to another.
+
+stock_price(symbol: str, date: str) -> float
+
+Returns the closing price of a stock on a given date.
+
+book_flight(origin: str, destination: str, date: str, class: str) -> str
+
+Books a flight and returns a booking reference.
+
+send_email(recipient: str, subject: str, body: str) -> bool
+
+Sends an email and returns True if successful.
+
+User Request (Test Challenge):
+
+Check the weather in Tokyo next Friday.
+
+If the temperature is below 15°C, convert $200 USD to JPY.
+
+Check the stock price of AAPL last Monday.
+
+Book a business-class flight from New York to Tokyo next Friday.
+
+Send an email to your manager summarizing:
+
+Tokyo weather
+
+USD to JPY conversion (if applicable)
+
+AAPL stock price
+
+Flight booking reference
+
+Requirements for Model Response:
+
+Use only the tools provided. Do not invent extra functions.
+
+Decide conditional logic based on tool outputs.
+
+Format the response as tool calls in order, then provide a final summary.
+
+Do not output fake results unless explicitly instructed — simulate tool calls.
+
+Extra Challenge for the Model:
+
+Some tools’ outputs are needed as inputs for other tools (e.g., currency_convert depends on weather condition).
+
+The model should reason about which tools to call first.
+
+The prompt tests: tool selection, argument filling, conditional execution, and summarizing results.
